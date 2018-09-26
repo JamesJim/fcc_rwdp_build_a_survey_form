@@ -10,11 +10,57 @@
     <h1 id="title">Survey Form</h1>
   </header>
   <main>
-    <section id="description">
-      <p>
+    <section>
+      <p id="description">
         This is a survey form
       </p>
     </section>
+    <form id="survey-form">
+      <label id="name-label">
+        <sup>*</sup>Name:
+      </label>
+      <input id="name" type="text" name="Name" placeholder="Enter Your Name" required>
+
+      <label id="email-label">
+        <sup>*</sup>Email:
+      </label>
+      <input id="email" type="email" name="email" placeholder="Enter Your Email" required>
+
+      <label id="number-label">
+        <sup>*</sup>Age:
+      </label>
+      <input id="number" type="number" name="age" placeholder="Age" required min="0" max="110">
+
+      <label>
+        Which option best describes your current role?
+      </label>
+      <select id="dropdown">
+        <option value="student">Student</option>
+        <option value="full-time-job">Full Time Job</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>
+        <sup>*</sup>How likely is that you would recommend fcc to a friend?
+      </label>
+      <input type="radio" name="reco" value="Definitely" checked required> Definitely<br>
+      <input type="radio" name="reco" value="Maybe"> Maybe<br>
+      <input type="radio" name="reco" value="Not-Sure"> Not Sure<br>
+
+      <label>
+        Things that should be improved in the future (Check all that apply):
+      </label>
+      <input type="checkbox" name="improve1" value="Front-end Projects" checked> Front-end Projects<br>
+      <input type="checkbox" name="improve2" value="Back-end Projects"> Back-end Projects<br>
+      <input type="checkbox" name="improve3" value="Challenges"> Challenges<br>
+
+      <label>
+        Any Comments or Suggestions?
+      </label>
+      <textarea>Enter your comment here...</textarea>
+
+      <button id="submit">Submit</button>
+    </form>
   </main>
 <footer>
   <p>
