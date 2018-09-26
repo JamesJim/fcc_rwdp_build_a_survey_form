@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: white;
+}
+main {
+  background-color: lightgreen;
+  flex: 1;
+}
+
+h1 {
+  font: helvetica;
+  font-weight: bold;
+}
+
+footer {
+  background-color: lightgray;
+}
