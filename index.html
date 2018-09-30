@@ -10,56 +10,132 @@
     <h1 id="title">Survey Form</h1>
   </header>
   <main>
-    <section>
+    <section id="form-section">
       <p id="description">
         This is a survey form
       </p>
     </section>
+
     <form id="survey-form">
-      <label id="name-label">
-        <sup>*</sup>Name:
-      </label>
-      <input id="name" type="text" name="Name" placeholder="Enter Your Name" required>
 
-      <label id="email-label">
-        <sup>*</sup>Email:
-      </label>
-      <input id="email" type="email" name="email" placeholder="Enter Your Email" required>
+      <div class="fieldset">
+        <section class="left">
+          <label id="name-label">
+            <sup>*</sup>Name:
+          </label>
+        </section>
+        <section class="right">
+          <input id="name" type="text" name="Name" placeholder="Enter Your Name" required>
+        </section>
+      </div>
 
-      <label id="number-label">
-        <sup>*</sup>Age:
-      </label>
-      <input id="number" type="number" name="age" placeholder="Age" required min="0" max="110">
+      <div class="fieldset">
+        <section class="left">
+          <label id="email-label">
+            <sup>*</sup>Email:
+          </label>
+        </section>
+        <section class="right">
+          <input id="email" type="email" name="email" placeholder="Enter Your Email" required>
+        </section>
+      </div>
 
-      <label>
-        Which option best describes your current role?
-      </label>
-      <select id="dropdown">
-        <option value="student">Student</option>
-        <option value="full-time-job">Full Time Job</option>
-        <option value="other">Other</option>
-      </select>
+      <div class="fieldset">
+        <section class="left">
+          <label id="number-label">
+            <sup>*</sup>Age:
+          </label>
+        </section>
+        <section class="right">
+          <input id="number" type="number" name="age" placeholder="Age" required min="0" max="110">
+        </section>
+      </div>
 
-      <label>
-        <sup>*</sup>How likely is that you would recommend fcc to a friend?
-      </label>
-      <input type="radio" name="reco" value="Definitely" checked required> Definitely<br>
-      <input type="radio" name="reco" value="Maybe"> Maybe<br>
-      <input type="radio" name="reco" value="Not-Sure"> Not Sure<br>
+      <div class="fieldset">
+        <section class="left">
+          Which option best describes your current role?
+        </section>
+        <section class="right">
+          <select id="dropdown">
+            <option value="student">Student</option>
+            <option value="full-time-job">Full Time Job</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+      </div>
 
-      <label>
-        Things that should be improved in the future (Check all that apply):
-      </label>
-      <input type="checkbox" name="improve1" value="Front-end Projects" checked> Front-end Projects<br>
-      <input type="checkbox" name="improve2" value="Back-end Projects"> Back-end Projects<br>
-      <input type="checkbox" name="improve3" value="Challenges"> Challenges<br>
+      <div class="fieldset">
+        <section class="left textalignright">
+          <sup>*</sup>How likely is that you would recommend fcc to a friend?
+        </section>
+        <section  class="right responsecontainer">
+          <div class="optioncontainer">
+            <input class="checkradio" type="radio" name="reco" value="Definitely" checked required>
+            <div class="checkradiotext">
+              Definitely
+            </div>
+          </div>
 
-      <label>
-        Any Comments or Suggestions?
-      </label>
-      <textarea>Enter your comment here...</textarea>
+          <div class="optioncontainer">
+            <input class="checkradio" type="radio" name="reco" value="Maybe">
+            <div class="checkradiotext">
+              Maybe
+            </div>
+          </div>
 
-      <button id="submit">Submit</button>
+          <div class="optioncontainer">
+            <input class="checkradio" type="radio" name="reco" value="Not-Sure">
+            <div class="checkradiotext">
+              Not Sure
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="fieldset">
+        <section class="left textalignright">
+          Things that should be improved in the future (Check all that apply):
+        </section>
+        <section class="right responsecontainer">
+
+          <div class="optioncontainer">
+            <input class="checkradio" type="checkbox" id="improve1" name="improve1" value="Front-end Projects">
+            <div class="checkradiotext">
+              Front-end Projects
+            </div>
+          </div>
+
+          <div class="optioncontainer">
+            <input class="checkradio" type="checkbox" name="improve2" value="Back-end Projects">
+            <div class="checkradiotext">
+              Back-end Projects
+            </div>
+          </div>
+
+          <div class="optioncontainer">
+            <input class="checkradio" type="checkbox" name="improve3" value="Challenges">
+            <div class="checkradiotext">
+              Challenges
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      <div class="fieldset">
+        <section class="left">
+          Any Comments or Suggestions?
+        </section>
+        <section class="right">
+          <textarea placeholder="Enter your comment here..."
+          ></textarea>
+        </section>
+      </div>
+
+      <div class="fieldset">
+        <button id="submit">Submit</button>
+      </div>
+
     </form>
   </main>
 <footer>
